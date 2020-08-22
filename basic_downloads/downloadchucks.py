@@ -8,8 +8,11 @@ import basic_downloads.getchucks
 
 def writefile(url,dir):
     c=open(dir,"wb")
-    s=basic_downloads.getchucks.get_download_chucks(url=url)
-    for y in s[1]:
-        f=s[0][y]
+    m=-1
+    s=basic_downloads.getchucks.gdc(url=url)
+    for y in s:
+        m+=1
+        f=s[m]
         c.write(f)
     c.close()
+writefile("http://www.baidu.com","index.html")
