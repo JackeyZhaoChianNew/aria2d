@@ -16,4 +16,5 @@ def writefile(url,dir):
         f=s[m]
         c.write(f)
     c.close()
-writefile("http://www.baidu.com","index.html")
+if __name__ == '__main__':
+    writefile("http://www.baidu.com","index.html")
